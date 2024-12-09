@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>GameHub - Obchod</title>
+</head>
+<body>
+<header>
+    <nav class="nav-left">
+        <a href="obchod.html">GameHub</a>
+    </nav>
+
+    <nav class="nav-center">
+        <a href="obchod.html">Obchod</a>
+        <a href="knihovna.html">Knihovna</a>
+        <a href="podpora.html">Podpora</a>
+    </nav>
+
+    <nav class="nav-right">
+        <a href="prihlaseni.html">Přihlásit se</a>
+    </nav>
+</header>
+
+<main class="shop-layout">
+
+    <!-- Vyhledávací lišta -->
+    <section class="search-bar">
+        <input type="text" placeholder="Hledat hry..." class="search-input" />
+        <button class="search-button">Vyhledat</button>
+    </section>
+
+    <!-- Doporučené -->
+    <section class="recommended">
+        <h2>Doporučené</h2>
+        <div class="recommended-main">
+            <!-- Hlavní blok -->
+            <div class="main-item">
+                <img src="games/HL3.webp" alt="Hlavní doporučený obrázek" class="image-slot" />
+                <div class="overlay">
+                    <span class="game-title">Half-Life 3</span>
+                    <button class="buy-button">Koupit</button>
+                </div>
+                <span class="price-tag">899 Kč</span>
+            </div>
+            <!-- Menší bloky vpravo -->
+            <div class="small-blocks">
+                <div class="small-item">
+                    <img src="games/LoL.avif" alt="Menší doporučený obrázek 1" class="image-slot" />
+                    <div class="overlay">
+                        <span class="game-title">League of Legends</span>
+                        <button class="buy-button">Získat</button>
+                    </div>
+                    <span class="price-tag">Zdarma</span>
+                </div>
+                <div class="small-item">
+                    <img src="games/Minec.jpg" alt="Menší doporučený obrázek 2" class="image-slot" />
+                    <div class="overlay">
+                        <span class="game-title">Minecraft</span>
+                        <button class="buy-button">Koupit</button>
+                    </div>
+                    <span class="price-tag">549 Kč</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pro vás -->
+    <section class="foryou">
+        <h2>Pro vás</h2>
+        <div class="foryou-items">
+            <div class="foryou-item">
+                <img src="games/TF2.jpg" alt="Pro vás obrázek" class="image-slot" />
+                <div class="overlay">
+                    <span class="game-title">Team Fortress 2</span>
+                    <button class="buy-button">Získat</button>
+                </div>
+                <span class="price-tag">Zdarma</span>
+            </div>
+            <div class="foryou-item">
+                <img src="games/Minec.jpg" alt="Pro vás obrázek" class="image-slot" />
+                <div class="overlay">
+                    <span class="game-title">Minecraft</span>
+                    <button class="buy-button">Koupit</button>
+                </div>
+                <span class="price-tag">549 Kč</span>
+            </div>
+            <div class="foryou-item">
+                <img src="games/BattleBit.png" alt="Pro vás obrázek" class="image-slot" />
+                <div class="overlay">
+                    <span class="game-title">BattleBit Remastered</span>
+                    <button class="buy-button">Koupit</button>
+                </div>
+                <span class="price-tag">555 Kč</span>
+            </div>
+            <div class="foryou-item">
+                <img src="games/GTA_V.jpg" alt="Pro vás obrázek" class="image-slot" />
+                <div class="overlay">
+                    <span class="game-title">Grand Theft Auto V</span>
+                    <button class="buy-button">Koupit</button>
+                </div>
+                <span class="price-tag">899 Kč</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

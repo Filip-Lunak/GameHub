@@ -1,0 +1,788 @@
+:root {
+    --primary-color: #252525;
+    font-family: "Oswald", sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw;
+    background-color: #181818;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #fff;
+}
+
+nav {
+
+}
+
+.nav-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-left a {
+    font-weight: bold;
+}
+
+.nav-center {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    font-weight: normal;
+    transition: 0.4s ease-out;
+}
+
+nav a:hover, nav a:focus {
+    scale: 0.8;
+    transition:  0.4s ease-in, transform 0.4s ease-out;
+}
+
+@media (max-width: 1300px) {
+    a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    a {
+        font-size: 1.5rem;
+        padding-bottom: 0.3rem;
+    }
+}
+
+@media (max-width: 515px) {
+    a {
+        font-size: 1.2rem;
+        padding-bottom: 0.2rem;
+    }
+}
+
+@media (max-width: 415px) {
+    a {
+        font-size: 1rem;
+        padding-bottom: 0.2rem;
+    }
+}
+
+
+main {
+
+}
+
+/*Prihlaseni layout*/
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #808080;
+    width: 100%;
+    max-width: 400px; /* Maximální šířka */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+}
+
+.login-nadpis {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form button {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    transition: 0.7s ease-out;
+}
+
+.login-form button:hover {
+    background-color: #303030;
+    transition: 0.4s ease-in;
+}
+
+.register-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-section p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.register-section .register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: #000;
+    cursor: pointer;
+    transition: 0.7s ease-out;
+}
+
+.register-section .register-button:hover {
+    background-color: #303030;
+    transition: 0.4s ease-in;
+}
+
+@media (max-width: 1024px) {
+    .login-main {
+        max-width: 350px;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .login-form label {
+        font-size: 1.3rem;
+    }
+    .login-form input, .login-form button {
+        font-size: 1.2rem;
+    }
+    .login-form button {
+        padding: 15px;
+    }
+    .register-section p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-main {
+        max-width: 300px;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .login-form label {
+        font-size: 1.2rem;
+    }
+    .login-form input, .login-form button {
+        font-size: 1rem;
+    }
+    .login-form button {
+        padding: 10px;
+    }
+    .register-section p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-main {
+        max-width: 90%;
+        padding: 8px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .login-form label {
+        font-size: 1.1rem;
+    }
+    .login-form input, .login-form button {
+        font-size: 1rem;
+    }
+    .login-form button {
+        padding: 12px;
+    }
+    .register-section p {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Layout Podpora */
+
+.support-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.support-nadpis {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.support p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.custom-button {
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Oswald", sans-serif;
+    border-radius: 20px;
+    transition: 0.7s ease-out;
+}
+
+.custom-button:hover {
+    background-color: #454545;
+    color: white;
+    border: 2px solid white;
+    font-family: "Oswald", sans-serif;
+    border-radius: 20px;
+    transition: 0.4s ease-in;
+}
+
+.support-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+@media (max-width: 1024px) {
+    .support h1 {
+        font-size: 2.5rem;
+    }
+    .support p {
+        font-size: 1.2rem;
+    }
+    .custom-button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .support h1 {
+        font-size: 2rem;
+    }
+    .support p {
+        font-size: 1rem;
+    }
+    .custom-button {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .support h1 {
+        font-size: 1.5rem;
+    }
+    .support p {
+        font-size: 1rem;
+    }
+    .custom-button {
+        font-size: 1rem;
+        padding: 14px;
+        width: 100%;
+    }
+}
+
+/* Layout Knihovna */
+
+.library-container {
+    font-family: "Oswald", sans-serif;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+.library-container h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+.library-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.library-slot {
+    flex: 0 0 250px;
+    height: 325px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.3s ease-in, transform 0.5s ease-out;
+}
+
+.library-slot:hover {
+    scale: 1.1;
+    transition: 0.3s ease-in, transform 0.3s ease-out;
+    box-shadow: white 0 0 2rem;
+    z-index: 100;
+}
+
+.library-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-title-library {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.library-slot:hover .game-title-library {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .library-slot {
+        flex: 0 0 100px;
+        height: 150px;
+    }
+
+    .library-container h1 {
+        font-size: 2rem;
+    }
+
+    .library-grid {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .library-slot {
+        flex: 0 0 180px;
+        height: 270px;
+    }
+
+    .library-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .library-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .library-slot {
+        flex: 0 0 80px;
+        height: 120px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .library-slot {
+        flex: 0 0 200px;
+        height: 300px;
+    }
+
+    .library-container h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .library-slot {
+        flex: 0 0 250px;
+        height: 375px;
+    }
+}
+
+/*Obchod layout*/
+
+.shop-layout {
+    font-family: "Oswald", sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recommended,
+.foryou {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #fff;
+}
+
+/* Vyhledávací lišta */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 60%;
+    max-width: 600px;
+    border: 2px solid #fff;
+    border-radius: 15px 0 0 15px;
+    background-color: #181818;
+    color: #fff;
+    height: 3.5rem;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+.search-button {
+    padding: 0 20px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 0 15px 15px 0;
+    transition: background-color 0.5s, color 0.5s;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+
+.search-button:hover {
+    background-color: #181818;
+    color: #fff;
+}
+
+
+/* Doporučené */
+.recommended-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 300px;
+}
+
+.main-item {
+    flex: 2;
+    border: 2px solid #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.small-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    height: 100%;
+}
+
+.small-item {
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.game-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    white-space: normal;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.buy-button {
+    font-family: "Oswald", sans-serif;
+    padding: 8px 16px;
+    font-size: 1.3rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+/* Cenovka */
+.price-tag {
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    pointer-events: all;
+}
+
+.main-item:hover,
+.small-item:hover,
+.foryou-item:hover {
+    box-shadow: white 0 0 1rem;
+    transition: 0.3s ease-in, 0.3s ease-out;
+}
+
+
+.main-item:hover .price-tag,
+.small-item:hover .price-tag,
+.foryou-item:hover .price-tag {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.main-item:hover .overlay,
+.small-item:hover .overlay,
+.foryou-item:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.main-item:hover .image-slot,
+.small-item:hover .image-slot,
+.foryou-item:hover .image-slot {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* For you */
+.foryou-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.foryou-item {
+    flex: 1 1 calc(45% - 20px);
+    border: 2px solid #fff;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.foryou-item .overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.image-slot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .recommended-main {
+        flex-direction: column;
+    }
+
+    .small-blocks {
+        flex-direction: row;
+    }
+
+    .small-item {
+        height: 100px;
+    }
+
+    .main-item {
+        height: 250px;
+    }
+
+    .foryou-item {
+        flex: 1 1 calc(100% - 10px);
+        height: 150px;
+    }
+
+    .price-tag {
+        font-size: 0.8rem;
+    }
+
+    .overlay {
+        padding: 5px;
+    }
+
+    .small-blocks .game-title {
+        font-size: 0.9rem;
+    }
+
+    .buy-button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .search-input {
+        width: 80%;
+        height: 2rem;
+    }
+
+    .search-button {
+        font-size: 1rem;
+        padding: 0 15px;
+        height: 2rem;
+    }
+}
+
+@media (width: 540px) and (height: 720px) {
+    .recommended-main {
+        flex-direction: row;
+    }
+
+    .small-blocks {
+        flex-direction: column;
+    }
+
+    .small-item {
+        height: 100px;
+    }
+
+    .main-item {
+        height: 220px;
+    }
+
+    .foryou-item {
+        flex: 1 1 calc(100% - 10px);
+        height: 250px;
+    }
+}
