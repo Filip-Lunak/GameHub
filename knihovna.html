@@ -9,70 +9,89 @@
 </head>
 <body>
 <header>
-    <nav class="nav-left">
-      <a href="obchod.html">GameHub</a>
-    </nav>
+  <nav class="nav-left">
+    <a href="obchod.html">GameHub</a>
+  </nav>
 
-    <nav class="nav-center">
-      <a href="obchod.html">Obchod</a>
-      <a href="knihovna.html">Knihovna</a>
-      <a href="podpora.html">Podpora</a>
-    </nav>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
 
-    <nav class="nav-right">
-      <a href="prihlaseni.html">Přihlásit se</a>
-    </nav>
+  <nav class="nav-center">
+    <a href="obchod.html">Obchod</a>
+    <a href="knihovna.html">Knihovna</a>
+    <a href="podpora.html">Podpora</a>
+    <a href="prihlaseni.html" class="mobile-login">Přihlásit se</a>
+  </nav>
+
+  <nav class="nav-right">
+    <a href="prihlaseni.html">Přihlásit se</a>
+  </nav>
 </header>
+
 <!-- Hry -->
 <main class="library-container">
-  <h1>Vlastněné hry</h1>
-  <div class="library-grid">
 
-    <div class="library-slot">
-      <a href="">
-        <img src="games/Portal.jpg" alt="Portal">
-        <div class="game-title-library">Portal</div>
-      </a>
+  <!-- Vaše oblíbené hry -->
+  <section class="favorites-section">
+    <h3>Vaše oblíbené hry</h3>
+    <div class="library-grid">
+      <div class="library-slot">
+        <a href="">
+          <img src="games/Portal.jpg" alt="Portal">
+          <div class="game-title-library">Portal</div>
+        </a>
+      </div>
+      <div class="library-slot">
+        <a href="">
+          <img src="games/Portal2.jpg" alt="Portal 2">
+          <div class="game-title-library">Portal 2</div>
+        </a>
+      </div>
+      <div class="library-slot">
+        <a href="">
+          <img src="games/R6.jpg" alt="Rainbow Six Siege">
+          <div class="game-title-library">Rainbow Six Siege</div>
+        </a>
+      </div>
     </div>
-    <div class="library-slot">
-      <a href="">
-        <img src="games/Portal2.jpg" alt="Portal 2">
-        <div class="game-title-library">Portal 2</div>
-      </a>
-    </div>
-    <div class="library-slot">
-      <a href="">
-        <img src="games/RimWorld.jpg" alt="RimWorld">
-        <div class="game-title-library">RimWorld</div>
-      </a>
-    </div>
-    <div class="library-slot">
-      <a href="">
-        <img src="games/R6.jpg" alt="Rainbow Six Siege">
-        <div class="game-title-library">Rainbow Six Siege</div>
-      </a>
-    </div>
-    <div class="library-slot">
-      <a href="">
-        <img src="games/Battlebit_V.jpg" alt="BattleBit Remastered">
-        <div class="game-title-library">BattleBit Remastered</div>
-      </a>
-    </div>
-    <div class="library-slot">
-      <a href="">
-        <img src="games/Hollow_Knight.jpg" alt="Hollow Knight">
-        <div class="game-title-library">Hollow Knight</div>
-      </a>
-    </div>
-    <div class="library-slot">
-      <a href="">
-        <img src="games/Fonisko.jpg" alt="Fortnite">
-        <div class="game-title-library">Fortnite</div>
-      </a>
-    </div>
+  </section>
 
-  </div>
+  <!-- Vaše ostatní hry -->
+  <section class="other-games-section">
+    <h3>Vaše ostatní hry</h3>
+    <div class="library-grid">
+      <div class="library-slot">
+        <a href="">
+          <img src="games/RimWorld.jpg" alt="RimWorld">
+          <div class="game-title-library">RimWorld</div>
+        </a>
+      </div>
+      <div class="library-slot">
+        <a href="">
+          <img src="games/Battlebit_V.jpg" alt="BattleBit Remastered">
+          <div class="game-title-library">BattleBit Remastered</div>
+        </a>
+      </div>
+      <div class="library-slot">
+        <a href="">
+          <img src="games/Hollow_Knight.jpg" alt="Hollow Knight">
+          <div class="game-title-library">Hollow Knight</div>
+        </a>
+      </div>
+      <div class="library-slot">
+        <a href="">
+          <img src="games/Fonisko.jpg" alt="Fortnite">
+          <div class="game-title-library">Fortnite</div>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
+
 
 
 </body>

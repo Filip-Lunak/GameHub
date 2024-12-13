@@ -13,86 +13,163 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5vw;
+    padding: 2rem;
     background-color: #181818;
     text-transform: uppercase;
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid #fff;
-}
-
-nav {
-
-}
-
-.nav-left {
-    display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .nav-left a {
     font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 .nav-center {
     display: flex;
-    gap: 2vw;
+    gap: 1.5rem;
     justify-content: center;
+    flex-grow: 1;
 }
 
-.nav-right {
-    display: flex;
-    justify-content: flex-end;
-}
-
-a {
+.nav-center a {
     text-decoration: none;
     color: white;
-    font-size: 3rem;
-    font-weight: normal;
+    font-size: 2rem;
     transition: 0.4s ease-out;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: 0.4s ease-out;
+    display: inline-block;
 }
 
 nav a:hover, nav a:focus {
     scale: 0.8;
-    transition:  0.4s ease-in, transform 0.4s ease-out;
+    transition:  0.4s ease-in;
 }
 
-@media (max-width: 1300px) {
-    a {
-        font-size: 2rem;
-    }
+.nav-right a:hover{
+    scale: 0.8;
+    transition:  0.4s ease-in;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav-center {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #181818;
+    padding: 1rem 0;
+    z-index: 999;
+    gap: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+#menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-login {
+    display: none;
 }
 
 @media (max-width: 700px) {
-    a {
+    header {
+        padding: 1rem;
+    }
+
+    .nav-center {
+        display: none;
+    }
+
+    .nav-left a {
         font-size: 1.5rem;
-        padding-bottom: 0.3rem;
+    }
+
+    .nav-right {
+        display: none; /* Skryje tlačítko na pravé straně */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #menu-toggle:checked ~ .nav-center {
+        display: flex;
+    }
+
+    .mobile-login {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 515px) {
-    a {
+@media (max-width: 400px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    .nav-left a {
         font-size: 1.2rem;
-        padding-bottom: 0.2rem;
+    }
+
+    .nav-center a, .mobile-login {
+        font-size: 1.2rem;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
     }
 }
-
-@media (max-width: 415px) {
-    a {
-        font-size: 1rem;
-        padding-bottom: 0.2rem;
-    }
-}
-
 
 main {
 
 }
 
 /*Prihlaseni layout*/
-
 .login-main {
     display: flex;
     justify-content: center;
@@ -167,8 +244,7 @@ main {
 }
 
 .register-section p {
-    margin: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
     font-size: 1.5rem;
     color: #fff;
 }
@@ -370,11 +446,21 @@ main {
     text-align: center;
 }
 
-.library-container h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+
+
+section {
+    margin-bottom: 1rem;
+}
+
+
+section h3 {
+    font-size: 4rem;
     color: #fff;
-    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 5px;
 }
 
 .library-grid {
@@ -382,6 +468,7 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .library-slot {
@@ -436,8 +523,8 @@ main {
         height: 150px;
     }
 
-    .library-container h1 {
-        font-size: 2rem;
+    section h3 {
+        font-size: 2.5rem; 
     }
 
     .library-grid {
@@ -451,7 +538,7 @@ main {
         height: 270px;
     }
 
-    .library-container h1 {
+    section h3 {
         font-size: 2.5rem;
     }
 
@@ -465,6 +552,11 @@ main {
         flex: 0 0 80px;
         height: 120px;
     }
+
+    section h3 {
+        font-size: 2rem;
+    }
+
 }
 
 @media (min-width: 1024px) {
@@ -473,9 +565,10 @@ main {
         height: 300px;
     }
 
-    .library-container h1 {
+    section h3 {
         font-size: 3rem;
     }
+
 }
 
 @media (min-width: 1440px) {
@@ -484,6 +577,7 @@ main {
         height: 375px;
     }
 }
+
 
 /*Obchod layout*/
 
