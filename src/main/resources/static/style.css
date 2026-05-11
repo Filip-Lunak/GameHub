@@ -1,0 +1,1242 @@
+:root {
+    --primary-color: #252525;
+    font-family: "Oswald", sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #181818;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #fff;
+    flex-wrap: wrap;
+}
+
+.nav-left a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.nav-center {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: 0.4s ease-out;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: 0.4s ease-out;
+    display: inline-block;
+}
+
+nav a:hover, nav a:focus {
+    scale: 0.8;
+    transition:  0.4s ease-in;
+}
+
+.nav-right a:hover{
+    scale: 0.8;
+    transition:  0.4s ease-in;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav-center {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #181818;
+    padding: 1rem 0;
+    z-index: 999;
+    gap: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+#menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-login {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 1rem;
+    }
+
+    .nav-center {
+        display: none;
+    }
+
+    .nav-left a {
+        font-size: 1.5rem;
+    }
+
+    .nav-right {
+        display: none; /* Skryje tlačítko na pravé straně */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #menu-toggle:checked ~ .nav-center {
+        display: flex;
+    }
+
+    .mobile-login {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    .nav-left a {
+        font-size: 1.2rem;
+    }
+
+    .nav-center a, .mobile-login {
+        font-size: 1.2rem;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+}
+
+main {
+
+}
+
+/*Prihlaseni layout*/
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #808080;
+    width: 100%;
+    max-width: 400px; /* Maximální šířka */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+}
+
+.login-nadpis {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form button {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    transition: 0.7s ease-out;
+}
+
+.login-form button:hover {
+    background-color: #303030;
+    transition: 0.4s ease-in;
+}
+
+.register-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-section p {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.register-section .register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: #000;
+    cursor: pointer;
+    transition: 0.7s ease-out;
+}
+
+.register-section .register-button:hover {
+    background-color: #303030;
+    transition: 0.4s ease-in;
+}
+
+@media (max-width: 1024px) {
+    .login-main {
+        max-width: 350px;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .login-form label {
+        font-size: 1.3rem;
+    }
+    .login-form input, .login-form button {
+        font-size: 1.2rem;
+    }
+    .login-form button {
+        padding: 15px;
+    }
+    .register-section p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-main {
+        max-width: 300px;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .login-form label {
+        font-size: 1.2rem;
+    }
+    .login-form input, .login-form button {
+        font-size: 1rem;
+    }
+    .login-form button {
+        padding: 10px;
+    }
+    .register-section p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-main {
+        max-width: 90%;
+        padding: 8px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .login-form label {
+        font-size: 1.1rem;
+    }
+    .login-form input, .login-form button {
+        font-size: 1rem;
+    }
+    .login-form button {
+        padding: 12px;
+    }
+    .register-section p {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Layout Podpora */
+
+.support-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.support-nadpis {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.support p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.custom-button {
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Oswald", sans-serif;
+    border-radius: 20px;
+    transition: 0.7s ease-out;
+}
+
+.custom-button:hover {
+    background-color: #454545;
+    color: white;
+    border: 2px solid white;
+    font-family: "Oswald", sans-serif;
+    border-radius: 20px;
+    transition: 0.4s ease-in;
+}
+
+.support-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+@media (max-width: 1024px) {
+    .support h1 {
+        font-size: 2.5rem;
+    }
+    .support p {
+        font-size: 1.2rem;
+    }
+    .custom-button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .support h1 {
+        font-size: 2rem;
+    }
+    .support p {
+        font-size: 1rem;
+    }
+    .custom-button {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .support h1 {
+        font-size: 1.5rem;
+    }
+    .support p {
+        font-size: 1rem;
+    }
+    .custom-button {
+        font-size: 1rem;
+        padding: 14px;
+        width: 100%;
+    }
+}
+
+/* Layout Knihovna */
+
+.library-container {
+    font-family: "Oswald", sans-serif;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+section {
+    margin-bottom: 1rem;
+}
+
+
+section h3 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 5px;
+}
+
+.library-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.library-slot {
+    flex: 0 0 250px;
+    height: 325px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.3s ease-in, transform 0.5s ease-out;
+}
+
+.library-slot:hover {
+    scale: 1.1;
+    transition: 0.3s ease-in, transform 0.3s ease-out;
+    box-shadow: white 0 0 2rem;
+    z-index: 100;
+}
+
+.library-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-title-library {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.library-slot:hover .game-title-library {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .library-slot {
+        flex: 0 0 100px;
+        height: 150px;
+    }
+
+    section h3 {
+        font-size: 2.5rem;
+    }
+
+    .library-grid {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .library-slot {
+        flex: 0 0 180px;
+        height: 270px;
+    }
+
+    section h3 {
+        font-size: 2.5rem;
+    }
+
+    .library-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .library-slot {
+        flex: 0 0 80px;
+        height: 120px;
+    }
+
+    section h3 {
+        font-size: 2rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .library-slot {
+        flex: 0 0 200px;
+        height: 300px;
+    }
+
+    section h3 {
+        font-size: 3rem;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .library-slot {
+        flex: 0 0 250px;
+        height: 375px;
+    }
+}
+
+
+/*Obchod layout*/
+
+.shop-layout {
+    font-family: "Oswald", sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recommended,
+.foryou {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #fff;
+}
+
+/* Vyhledávací lišta */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 60%;
+    max-width: 600px;
+    border: 2px solid #fff;
+    border-radius: 15px 0 0 15px;
+    background-color: #181818;
+    color: #fff;
+    height: 3.5rem;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+.search-button {
+    padding: 0 20px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 0 15px 15px 0;
+    transition: background-color 0.5s, color 0.5s;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+
+.search-button:hover {
+    background-color: #181818;
+    color: #fff;
+}
+
+
+/* Doporučené */
+.recommended-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 300px;
+}
+
+.main-item {
+    flex: 2;
+    border: 2px solid #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.small-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    height: 100%;
+}
+
+.small-item {
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.game-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    white-space: normal;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.buy-button {
+    font-family: "Oswald", sans-serif;
+    padding: 8px 16px;
+    font-size: 1.3rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+/* Cenovka */
+.price-tag {
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    pointer-events: all;
+}
+
+.main-item:hover,
+.small-item:hover,
+.foryou-item:hover {
+    box-shadow: white 0 0 1rem;
+    transition: 0.3s ease-in, 0.3s ease-out;
+}
+
+
+.main-item:hover .price-tag,
+.small-item:hover .price-tag,
+.foryou-item:hover .price-tag {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.main-item:hover .overlay,
+.small-item:hover .overlay,
+.foryou-item:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.main-item:hover .image-slot,
+.small-item:hover .image-slot,
+.foryou-item:hover .image-slot {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* For you */
+.foryou-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.foryou-item {
+    flex: 1 1 calc(45% - 20px);
+    border: 2px solid #fff;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.foryou-item .overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.image-slot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .recommended-main {
+        flex-direction: column;
+    }
+
+    .small-blocks {
+        flex-direction: row;
+    }
+
+    .small-item {
+        height: 100px;
+    }
+
+    .main-item {
+        height: 250px;
+    }
+
+    .foryou-item {
+        flex: 1 1 calc(100% - 10px);
+        height: 150px;
+    }
+
+    .price-tag {
+        font-size: 0.8rem;
+    }
+
+    .overlay {
+        padding: 5px;
+    }
+
+    .small-blocks .game-title {
+        font-size: 0.9rem;
+    }
+
+    .buy-button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .search-input {
+        width: 80%;
+        height: 2rem;
+    }
+
+    .search-button {
+        font-size: 1rem;
+        padding: 0 15px;
+        height: 2rem;
+    }
+}
+
+@media (width: 540px) and (height: 720px) {
+    .recommended-main {
+        flex-direction: row;
+    }
+
+    .small-blocks {
+        flex-direction: column;
+    }
+
+    .small-item {
+        height: 100px;
+    }
+
+    .main-item {
+        height: 220px;
+    }
+
+    .foryou-item {
+        flex: 1 1 calc(100% - 10px);
+        height: 250px;
+    }
+}
+
+
+.cart-layout {
+    font-family: "Oswald", sans-serif;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cart-nadpis {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cart-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #181818;
+    border: 1px solid #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-title {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.cart-item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.cart-item-price {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.cart-remove-button {
+    font-family: "Oswald", sans-serif;
+    padding: 6px 14px;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cart-remove-button:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    transition: 0.2s ease-in;
+}
+
+.cart-summary {
+    flex: 1;
+    background-color: #181818;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: sticky;
+    top: 100px;
+}
+
+.cart-summary-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0;
+}
+
+.cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.cart-summary-divider {
+    border-top: 1px solid #fff;
+}
+
+.cart-summary-total {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.cart-checkout-button {
+    font-family: "Oswald", sans-serif;
+    padding: 15px;
+    font-size: 1.5rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s ease-out;
+}
+
+.cart-checkout-button:hover {
+    background-color: #218838;
+    transition: 0.4s ease-in;
+}
+
+@media (max-width: 768px) {
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .cart-summary {
+        position: static;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cart-item-img {
+        width: 70px;
+        height: 45px;
+    }
+
+    .cart-item-title {
+        font-size: 1.2rem;
+    }
+
+    .cart-item-price {
+        font-size: 1.1rem;
+    }
+
+    .cart-nadpis {
+        font-size: 2rem;
+    }
+}
+
+.game-layout {
+    font-family: "Oswald", sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.game-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #fff;
+}
+
+.game-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    padding: 30px;
+}
+
+.game-banner-title {
+    font-size: 3.5rem;
+    color: #fff;
+    margin: 0;
+}
+
+.game-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.game-left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.game-description {
+    font-size: 1.3rem;
+    color: #ccc;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.game-details {
+    background-color: #181818;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.game-detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #303030;
+    padding-bottom: 10px;
+}
+
+.game-detail-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detail-label {
+    color: #aaa;
+}
+
+.detail-value {
+    color: #fff;
+    font-weight: bold;
+}
+
+.game-right {
+    flex: 1;
+    position: sticky;
+    top: 100px;
+}
+
+.game-purchase-box {
+    background-color: #181818;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-price {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.game-buy-button {
+    font-family: "Oswald", sans-serif;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s ease-out;
+}
+
+.game-buy-button:hover {
+    background-color: #218838;
+    transition: 0.4s ease-in;
+}
+
+.game-cart-link {
+    font-size: 1.2rem;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.game-cart-link:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .game-banner {
+        height: 250px;
+    }
+
+    .game-banner-title {
+        font-size: 2.5rem;
+    }
+
+    .game-content {
+        flex-direction: column;
+    }
+
+    .game-right {
+        position: static;
+        width: 100%;
+    }
+
+    .game-purchase-box {
+        padding: 20px;
+    }
+
+    .game-price {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-banner {
+        height: 180px;
+    }
+
+    .game-banner-title {
+        font-size: 1.8rem;
+    }
+
+    .game-description {
+        font-size: 1.1rem;
+    }
+
+    .game-detail-row {
+        font-size: 1rem;
+    }
+}

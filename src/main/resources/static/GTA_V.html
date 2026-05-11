@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>GameHub - Grand Theft Auto V</title>
+</head>
+<body>
+
+<header>
+    <nav class="nav-left">
+        <a href="obchod.html">GameHub</a>
+    </nav>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-center">
+        <a href="obchod.html">Obchod</a>
+        <a href="knihovna.html">Knihovna</a>
+        <a href="podpora.html">Podpora</a>
+        <a href="prihlaseni.html" class="mobile-login">Přihlásit se</a>
+    </nav>
+
+    <nav class="nav-right">
+        <a href="kosik.html">🛒</a>
+        <a href="prihlaseni.html">Přihlásit se</a>
+    </nav>
+</header>
+
+<main class="game-layout">
+
+    <div class="game-banner">
+        <img src="games/GTA_V.jpg" alt="Grand Theft Auto V" class="game-banner-img">
+        <div class="game-banner-overlay">
+            <h1 class="game-banner-title">Grand Theft Auto V</h1>
+        </div>
+    </div>
+
+    <div class="game-content">
+
+        <div class="game-left">
+            <p class="game-description">
+                Grand Theft Auto V je open-world akční hra, která sleduje příběhy tří hlavních postav v kriminálním podsvětí. Nabízí rozsáhlý svět, plný misí, aktivit a online multiplayer GTA Online.
+            </p>
+
+            <div class="game-details">
+                <div class="game-detail-row">
+                    <span class="detail-label">Vývojář</span>
+                    <span class="detail-value">Rockstar North</span>
+                </div>
+                <div class="game-detail-row">
+                    <span class="detail-label">Žánr</span>
+                    <span class="detail-value">Akce, Open World</span>
+                </div>
+                <div class="game-detail-row">
+                    <span class="detail-label">Datum vydání</span>
+                    <span class="detail-value">17. 9. 2013</span>
+                </div>
+                <div class="game-detail-row">
+                    <span class="detail-label">Platforma</span>
+                    <span class="detail-value">PC</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-right">
+            <div class="game-purchase-box">
+                <span class="game-price">899 Kč</span>
+                <button class="game-buy-button" onclick="addToCart(5)">Přidat do košíku</button>
+                <a href="kosik.html" class="game-cart-link">Přejít do košíku</a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>GameHub - Košík</title>
+</head>
+<body style="visibility: hidden;">
+
+<header>
+    <nav class="nav-left">
+        <a href="obchod.html">GameHub</a>
+    </nav>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-center">
+        <a href="obchod.html">Obchod</a>
+        <a href="knihovna.html">Knihovna</a>
+        <a href="podpora.html">Podpora</a>
+        <a href="prihlaseni.html" class="mobile-login">Přihlásit se</a>
+    </nav>
+
+    <nav class="nav-right">
+        <a href="prihlaseni.html">Přihlásit se</a>
+    </nav>
+</header>
+
+<main class="cart-layout">
+    <h1 class="cart-nadpis">Košík</h1>
+
+    <div class="cart-container">
+
+        <!-- Položky v košíku -->
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="games/HL3.webp" alt="Half-Life 3" class="cart-item-img">
+                <div class="cart-item-info">
+                    <span class="cart-item-title">Half-Life 3</span>
+                </div>
+                <div class="cart-item-right">
+                    <span class="cart-item-price">899 Kč</span>
+                    <button class="cart-remove-button">Odebrat</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="games/Minec.jpg" alt="Minecraft" class="cart-item-img">
+                <div class="cart-item-info">
+                    <span class="cart-item-title">Minecraft</span>
+                </div>
+                <div class="cart-item-right">
+                    <span class="cart-item-price">549 Kč</span>
+                    <button class="cart-remove-button">Odebrat</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shrnutí objednávky -->
+        <div class="cart-summary">
+            <h2 class="cart-summary-title">Shrnutí objednávky</h2>
+            <div class="cart-summary-row">
+                <span>Half-Life 3</span>
+                <span>899 Kč</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>Minecraft</span>
+                <span>549 Kč</span>
+            </div>
+            <div class="cart-summary-divider"></div>
+            <div class="cart-summary-row cart-summary-total">
+                <span>Celkem</span>
+                <span>1 448 Kč</span>
+            </div>
+            <button class="cart-checkout-button">Zaplatit</button>
+        </div>
+
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
