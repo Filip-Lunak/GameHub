@@ -176,7 +176,7 @@ async function removeFromCart(gameId) {
     const response = await fetch(`/api/cart/remove/${gameId}`, { method: "DELETE" });
 
     if (response.ok) {
-        loadCart(); // Znovu načti košík
+        loadCart(); 
     } else {
         alert("Chyba při odebírání hry");
     }
